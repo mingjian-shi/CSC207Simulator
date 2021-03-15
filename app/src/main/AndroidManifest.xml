@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.csc207simulator">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".game2.gametwoui.GameTwoBonusActivity"></activity>
+        <activity android:name=".MasterActivity.MasterActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".AccountManagement.AccountManagementUI.LoginActivity" />
+        <activity android:name=".AccountManagement.AccountManagementUI.NewaccountActivity" />
+        <activity android:name=".SetupManagement.SetupActivity" />
+        <activity android:name=".game1.GameOneUI.GameOneSetUpActivity" />
+        <activity android:name=".game1.GameOneUI.GameOneActivity" />
+        <activity android:name=".game1.GameOneUI.GameOneEndActivity" />
+        <activity android:name=".game2.gametwoui.GameTwoActivity" />
+        <activity android:name=".game2.gametwoui.GameTwoSetUpActivity" />
+        <activity android:name=".game2.gametwoui.GameTwoGuessActivity" />
+        <activity android:name=".game2.gametwoui.GameTwoTradeTaActivity" />
+        <activity android:name=".game2.gametwoui.GameTwoTradeProActivity" />
+        <activity android:name=".SetupManagement.SettableActivity" />
+        <activity android:name=".game3.GameThreeUI.GameThreeDifficultyActivity" />
+        <activity android:name=".game3.GameThreeUI.GameThreeEndActivity" />
+        <activity android:name=".game3.GameThreeUI.GameThreeActivity" />
+        <activity android:name=".game3.GameThreeUI.GameThreeRuleActivity" />
+        <activity android:name=".Ranking.ScoreboardActivity" />
+        <activity android:name=".game3.GameThreeUI.GameThreeSecretActivity" />
+        <activity android:name=".game3.GameThreeUI.GameThreeSkipActivity" />
+    </application>
+
+</manifest>

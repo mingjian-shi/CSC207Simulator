@@ -1,0 +1,92 @@
+Kevin:
+    Created the basic outline of AppManager, Setup and Player.
+    Probably need to corporate with other classes, ex.GameManager, Books and Traders?
+    need to adjust these classes when necessary.
+Evan(Zhu Zeyu):
+    Created the basic outline of AccountManager & Account.(Oct-20)
+    Need further collaboration with AppManager.(Oct-20)
+    Create UI for Mainactivity, LoginActivity and NewaccountActivity.(Oct-26)
+Ying:
+    Created Book class under package game1.
+    Added Book.png to res.drawable and also to game1 package (not sure where it goes)
+Ying:
+    Created BookManager class under package game1.
+    Added docstrings to Book.draw() and Book.drawImage().
+Ying:
+    Code Affected: BookManager.java, Book.java
+    Flaw: There was no code responsible for setting the location of the Books meant to be drawn on
+    the screen.
+    Fix: Created class BookSetter that is an attribute of BookManager, and is responsible for
+    setting the location for newly created Books. Called by the createBooks method in BookManager.
+    Added getters for height and width of Book.
+Ying:
+    Created GameOneManager class that is a subclass of GameManager.
+    Changed visibility of GameManager.knowledge and GameManager.update() to protected so that
+    GameOneManager can access them.
+    Changed visibility of Setup to public so GameOneManager can access it.
+Ying:
+    Renamed image files for game2.
+Juan:
+    Created the the basic outline Teacher, TA, Professor.
+    Created the TeacherManager to create teacher presentation
+    Created the TeacherSetter to create new professors and TAs
+    Changed the variable in the Trader to avoid same variable
+Ying:
+    In the version control log, the first 3 "Type your name here" was Zeyu Zhu, and then rest was
+    Ying Zhou.
+Juan:
+    Changed the way to remove the teacher from the RemoveTeacher list
+Ying:
+    Created UI file for GameTwoActivity.
+Evan(Zhu Zeyu):
+    Modified AccountManager
+    Add save and load method(unfinished) to newaccountactivity and loginactivity
+    Create Setupactivity and its UI
+Evan(Zhu Zeyu):
+    Finish with the account saving and loading method
+    Modify the Setupactivity UI
+Ying:
+    Created class SettableActivity, that changes settings such as language and background color.
+    Changed SetupActivity to extend from SettableActivity.
+    Modified SetupActivity UI to support English and Chinese
+    Minor change to Setup class: string "White" changed to "white".
+Ying:
+    Added comment to SettableActivity for where a block of code was referenced from.
+Ying:
+    Code Affected: SettableActivity.java and SetupActivity.java
+    Flaw: SettableActivity has redundant variables currColor and currLanguage. Setup already has
+    these as attributes, and changes to language and background color should also be applied to
+    Setup.
+    Fix: Reformatted SettableActivity and SetupActivity to use Setup's attributes.
+
+Ying:
+    Code Affected: LoginActivity.java, NewaccountActivity.java, Setup.java, SettableActivity.java
+    Flaw: Because the language attribute in Setup was changed to a String there were bugs in the code
+    where other classes did not reflect the change.
+    Fix: Fixed the bugs.
+Ying:
+    Code Affected: SettableActivity.java, Setup.java, all Activity files in game2 folder except
+    GameTwoActivity.java. Strings.xml.
+    Added ability for game2 to display background color and language based on Setup.
+Ying:
+    Code Affected: All .java files that extend from Settable activity, and SettableActivity.java
+    Flaw: There is redundant code in loading up the Setup in the onCreate methods.
+    Fix: Moved the code that loads the Setup into the superclass SettableActivity.
+Ying:
+    Added comments on what needs to be changed for game one.
+Ying:
+    Code Affected: BookManager.java BookSetter.java
+    Flaw: update() method in BookManager and setLocation() method in BookSetter does not agree with
+    the decided changes to game one, which Victor will push later.
+    Fix: Changed the above mentioned methods to agree with changes to the game one that will come
+    later.
+Ying:
+    Code Affected: Book.java, BookManager.java, BookSetter.java
+    Flaw: Previous algorithm to position the Books contained a bug that did not account for a vacant
+    spot between two Books.
+    Fix: introduced id attribute to Book, and bookIds attrivute to BookManager to keep track of where
+    Books are located on the screen. Modified affected code to adapt to these changes.
+
+REFERENCES FOR IMAGES:
+"BookIconTemplate" by smirlianos licenced CC0: https://opengameart.org/content/book-icon-photoshop-template
+"Teacher" by prizzy96 licenced CC-BY-SA 3.0: https://opengameart.org/content/teacher
